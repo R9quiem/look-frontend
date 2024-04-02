@@ -1,8 +1,12 @@
 import TopHeader from "./components/common/TopHeader/TopHeader";
+import BottomHeader from "./components/common/BottomHeader/BottomHeader";
 
 function App() {
   return (
-    <TopHeader/>
+    <div>
+      <TopHeader/>
+      <BottomHeader/>
+    </div>
   );
 }
 
