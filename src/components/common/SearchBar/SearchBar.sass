@@ -1,11 +1,26 @@
 @import "src/styles/styles"
 .searchbar
-  border: none
-  box-shadow: none
-  padding: 15px
+  position: relative
+  height: 100%
+  background: white
   border-radius: 5px
+  display: flex
+  justify-content: space-between
   flex-grow: 0.7
-  &::placeholder
-    color: $secondary-text
-  &:focus
-    outline: none
+  &-input
+    flex-grow: 1
+    border: none
+    box-shadow: none
+    margin-left: 15px
+    margin-right: 15px
+    &::placeholder
+      color: $secondary-text
+    &:focus
+      outline: none
+  &__search-button
+    position: absolute
+    right: 5px
+    top: 52%
+    transform: translateY(-50%)
+    cursor: pointer
+
