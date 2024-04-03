@@ -1,6 +1,5 @@
-
 import './BottomHeader.sass'
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../../UI/SearchBar/SearchBar";
 import {ReactComponent as AccountSvg} from "../../../assets/account-icon.svg";
 import {ReactComponent as FavoritesSvg} from "../../../assets/favorites-icon.svg";
 import {ReactComponent as CartSvg} from "../../../assets/shopping_cart-icon.svg";
