@@ -1,12 +1,13 @@
 import TopHeader from "./components/common/TopHeader/TopHeader";
 import BottomHeader from "./components/common/BottomHeader/BottomHeader";
+import {BrowserRouter} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <TopHeader/>
       <BottomHeader/>
-    </div>
+    </BrowserRouter>
   );
 }
 
