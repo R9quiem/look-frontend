@@ -1,7 +1,7 @@
 import Carousel from "../../UI/Carousel/Carousel";
 import ShopCategorySelector from "../../UI/ShopCategorySelector/ShopCategorySelector";
 import {useState} from "react";
-import ShopCatalog from "../../UI/ShowCatalog/ShopCatalog";
+import ShopCatalog from "../../UI/ShopCatalog/ShopCatalog";
 import "./HomePage.sass"
 const slides = [
   'Slide 1',
