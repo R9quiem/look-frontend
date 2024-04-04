@@ -5,6 +5,7 @@ import {ReactComponent as FavoritesSvg} from "../../../assets/favorites-icon.svg
 import {ReactComponent as CartSvg} from "../../../assets/shopping_cart-icon.svg";
 import {ReactComponent as OrdersSvg} from "../../../assets/orders-icon.svg";
 import {ReactComponent as BurgerMenuSvg} from "../../../assets/burger_menu-icon.svg";
+import {NavLink} from "react-router-dom";
 
 function BottomHeader(props) {
   return (
@@ -13,7 +14,9 @@ function BottomHeader(props) {
         <button className="bottomheader__menu">
           <BurgerMenuSvg/>
         </button>
-        <img src="/logo.png" alt="Лого" className="bottomheader__logo" />
+        <NavLink to="/" className="bottomheader__logo-wrapper">
+          <img src="/logo.png" alt="Лого" className="bottomheader__logo" />
+        </NavLink>
         <SearchBar/>
         <nav className="bottomheader__nav">
           <a href="#" className="bottomheader__nav-link">
