@@ -1,3 +1,4 @@
+import "./ShopCatalog.sass"
 
 function ShopCatalog({selectedCategory}){
   return (
