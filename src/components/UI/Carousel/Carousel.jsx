@@ -19,10 +19,10 @@ const Carousel = (props) => {
           </div>
         ))}
       </div>
-      <button className="carousel__button-prev button" onClick={prevSlide}>
+      <button className="carousel__button-prev" onClick={prevSlide}>
         <span>&#10094;</span>
       </button>
-      <button className="carousel__button-next button" onClick={nextSlide}>
+      <button className="carousel__button-next" onClick={nextSlide}>
         <span>&#10095;</span>
       </button>
       <div className="carousel__dots">
