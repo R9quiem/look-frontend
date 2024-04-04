@@ -21,7 +21,7 @@ function SearchBar(props) {
     <div className="searchbar">
       <input
         type="text"
-        className="searchbar-input"
+        className="searchbar__input"
         placeholder="Поиск"
         value={searchTerm}
         onChange={handleSearchChange}
