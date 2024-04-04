@@ -12,7 +12,7 @@ const slides = [
 ];
 
 function HomePage(props){
-  const [selectedCategory, setSelectedCategory] = useState('vintage');
+  const [selectedCategory, setSelectedCategory] = useState('second-hand');
   return (
     <div className="homepage">
       <Carousel slides = {slides}/>
