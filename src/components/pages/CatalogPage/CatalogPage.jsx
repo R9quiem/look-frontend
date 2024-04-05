@@ -1,15 +1,11 @@
 import "./CatalogPage.sass"
-import {useParams} from "react-router-dom";
 import ProductCard from "../../UI/ProductCard/ProductCard";
 import Product from "../../../models/Product";
 
 function CatalogPage(props){
-  const product = new Product("Nike Sportswear синтетическим наполнителем", 50, 100, 50);
+  const product = new Product(0,"Nike Sportswear синтетическим наполнителем", 50, 100, 50);
   return (
     <div className="catalog">
-      <nav className="catalog__path">
-        Главная
-      </nav>
       <div className="catalog__current-category"><h1>Галоши</h1></div>
       <div className="catalog__main-wrapper">
         <section className="catalog__category-selector"></section>
