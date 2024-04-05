@@ -1,0 +1,40 @@
+@use "../../../styles/variables.sass" as *
+.product-card
+  border-radius: 20px
+  width: 275px
+  height: 480px
+  box-shadow: $card-box-shadow
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  position: relative
+  &__discount-icon
+    position: absolute
+    right: 0
+    top: 0
+    padding: 16px
+    width: 56px
+    height: 56px
+  &__image
+    flex-grow: 1
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__props
+    width: 100%
+    height: 100px
+    background: $light-secondary-color
+    padding: 16px
+    display: flex
+    flex-direction: column
+    gap: 4px
+    &__price-wrapper
+      gap: 4px
+      display: flex
+    &__price
+      font-weight: bold
+    &__original-price
+      text-decoration: line-through
+    &__discount
+      color: #6763FF
