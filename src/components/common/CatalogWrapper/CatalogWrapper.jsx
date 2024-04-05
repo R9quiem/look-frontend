@@ -1,10 +1,10 @@
 import "./CatalogWrapper.sass";
-import {Outlet} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 function CatalogWrapper(){
 return (
   <div className="catalog-wrapper">
     <nav className="catalog-wrapper__path">
-      Главная
+      <NavLink to="/" className="catalog-wrapper__path">Главная</NavLink>
     </nav>
     <Outlet/>
   </div>
