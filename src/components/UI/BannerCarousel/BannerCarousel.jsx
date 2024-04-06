@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import "./Carousel.sass";
-const Carousel = (props) => {
+import "./BannerCarousel.sass";
+const BannerCarousel = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const nextSlide = () => {
     setCurrentSlide((currentSlide + 1) % props.slides.length);
@@ -38,4 +38,4 @@ const Carousel = (props) => {
   );
 };
 
-export default Carousel;
+export default BannerCarousel;

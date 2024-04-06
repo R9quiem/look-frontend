@@ -1,4 +1,4 @@
-import Carousel from "../../UI/Carousel/Carousel";
+import BannerCarousel from "../../UI/BannerCarousel/BannerCarousel";
 import ShopCategorySelector from "../../UI/ShopCategorySelector/ShopCategorySelector";
 import {useState} from "react";
 import ShopCatalog from "../../UI/ShopCatalog/ShopCatalog";
@@ -15,7 +15,7 @@ function HomePage(props){
   const [selectedCategory, setSelectedCategory] = useState('second-hand');
   return (
     <div className="homepage">
-      <Carousel slides = {slides}/>
+      <BannerCarousel slides = {slides}/>
       <ShopCategorySelector setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
       <ShopCatalog selectedCategory={selectedCategory}/>
     </div>
