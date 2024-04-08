@@ -1,5 +1,5 @@
 import "./ProductCard.sass";
-import ProductPNG from "./product.png"
+import ProductPNG from "../../../assets/test/product.png"
 import {ReactComponent as DiscountSVG} from "../../../assets/discount-icon.svg"
 import {NavLink} from "react-router-dom";
 function ProductCard({product}){
