@@ -6,6 +6,7 @@ import MainWrapper from "./components/common/MainWrapper/MainWrapper";
 import CatalogPage from "./components/pages/CatalogPage/CatalogPage";
 import ProductPage from "./components/pages/ProductPage/ProductPage";
 import CatalogPageWrapper from "./components/common/CatalogPageWrapper/CatalogPageWrapper";
+import ProfilePage from "./components/pages/ProfilePage/ProfilePage";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           <Route path="/catalog" element={ <CatalogPageWrapper/> }>
             <Route path="/catalog/" element={<CatalogPage/>} />
             <Route path="/catalog/:key" element={<ProductPage/>} />
+          </Route>
+          <Route path="/profile" element={<ProfilePage/>}>
+
           </Route>
         </Routes>
       </MainWrapper>
