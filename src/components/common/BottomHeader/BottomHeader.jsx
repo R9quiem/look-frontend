@@ -19,22 +19,22 @@ function BottomHeader(props) {
         </NavLink>
         <SearchBar/>
         <nav className="bottomheader__nav">
-          <a href="#" className="bottomheader__nav-link">
+          <NavLink to="/profile/user-info" className="bottomheader__nav-link">
             <AccountSvg/>
             <span>Аккаунт</span>
-          </a>
-          <a href="#" className="bottomheader__nav-link">
+          </NavLink>
+          <NavLink to="/profile/favorite-products" className="bottomheader__nav-link">
             <FavoritesSvg/>
             <span>Закладки</span>
-          </a>
-          <a href="#" className="bottomheader__nav-link">
+          </NavLink>
+          <NavLink to="/cart"  className="bottomheader__nav-link">
             <CartSvg/>
             <span>Корзина</span>
-          </a>
-          <a href="#" className="bottomheader__nav-link">
+          </NavLink>
+          <NavLink to="/profile/orders"  className="bottomheader__nav-link">
             <OrdersSvg/>
             <span>Заказы</span>
-          </a>
+          </NavLink>
         </nav>
       </div>
     </header>
