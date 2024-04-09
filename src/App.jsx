@@ -13,12 +13,16 @@ import FavoriteShopsPage from "./components/pages/ProfilePages/FavoriteShopsPage
 import OrdersPage from "./components/pages/ProfilePages/OrdersPage/OrdersPage";
 import SellerInvitationPage from "./components/pages/ProfilePages/SellerInvitationPage/SellerInvitationPage";
 import UserInfoPage from "./components/pages/ProfilePages/UserInfoPage/UserInfoPage";
+import CartPage from "./components/pages/CartPage/CartPage";
+import HeadersWrapper from "./components/common/HeadersWrapper/HeadersWrapper";
 
 function App() {
   return (
     <BrowserRouter>
-      <TopHeader/>
-      <BottomHeader/>
+      <HeadersWrapper>
+        <TopHeader/>
+        <BottomHeader/>
+      </HeadersWrapper>
       <MainWrapper>
         <Routes>
           <Route path="/" element={
@@ -36,6 +40,7 @@ function App() {
             <Route path="/profile/seller-invitation" element={<SellerInvitationPage />} />
             <Route path="/profile/user-info" element={<UserInfoPage />} />
           </Route>
+
         </Routes>
       </MainWrapper>
     </BrowserRouter>
