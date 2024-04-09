@@ -40,7 +40,7 @@ function App() {
             <Route path="/profile/seller-invitation" element={<SellerInvitationPage />} />
             <Route path="/profile/user-info" element={<UserInfoPage />} />
           </Route>
-
+          <Route path="/cart" element={<CartPage/>}/>
         </Routes>
       </MainWrapper>
     </BrowserRouter>
