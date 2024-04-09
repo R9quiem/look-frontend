@@ -1,13 +1,8 @@
 import { useParams } from 'react-router-dom';
-import Product from "../../../models/Product";
 import MultiItemCarousel from "../../UI/MultiItemCarousel/MultiItemCarousel";
 import "./ProductPage.sass";
-import {useState} from "react";
+import data from "../../../assets/test/data.json";
 
-const products = [
-  new Product(0,"Nike Sportswear синтетическим наполнителем", 50, 100, 50),
-  new Product(1,"bebebeb", 10011)
-]
 const slides = [
   'Slide 1',
   'Slide 2',
@@ -18,7 +13,7 @@ const slides = [
 ];
 function ProductPage(props){
   const { key } = useParams();
-  const product = products.find((item)=>item.key === parseInt(key));
+  const product = data.items.find((item)=>item.id === (key));
   return (
     <div className="product-page">
       <section className="product-page__info">
@@ -26,6 +21,7 @@ function ProductPage(props){
           <MultiItemCarousel items={slides} visibleItems={4} horizontal={false}/>
         </div>
       </section>
+      {product.subtitle}
     </div>
   )
 }

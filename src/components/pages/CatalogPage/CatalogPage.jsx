@@ -1,9 +1,8 @@
 import "./CatalogPage.sass"
 import ProductCard from "../../UI/ProductCard/ProductCard";
-import Product from "../../../models/Product";
 
+import data from "../../../assets/test/data.json";
 function CatalogPage(props){
-  const product = new Product(0,"Nike Sportswear синтетическим наполнителем", 50, 100, 50);
   return (
     <div className="catalog">
       <div className="catalog__current-category"><h1>Галоши</h1></div>
@@ -12,14 +11,9 @@ function CatalogPage(props){
         <div className="catalog__content">
           <section className="catalog__filters"></section>
           <div className="catalog__product-list">
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
-            <ProductCard product={product}/>
+            {data.items.map((product)=> (
+              <ProductCard key={product.id} product={product}/>
+            ))}
           </div>
         </div>
       </div>
