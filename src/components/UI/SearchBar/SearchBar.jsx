@@ -21,26 +21,25 @@ function SearchBar(props) {
     setIsActive(false)
   }
   return (
-    <div className={"searchbar " + (isActive ? "searchbar-active" : "")}>
-      <Backdrop isActive={isActive} close={close}/>
-      <div className="searchbar__inner">
-        <input
-          type="text"
-          className={"searchbar__input " + (isActive ? "searchbar__input-active" : "")}
-          placeholder="Поиск"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          onFocus={open}
-        />
-        <button className="searchbar__search-button" onClick={handleSearchSubmit}>
-          <SearchSvg></SearchSvg>
-        </button>
+      <div className="searchbar">
+        <Backdrop isActive={isActive} close={close}/>
+        <div className="searchbar__inner">
+          <input
+              type="text"
+              className={"searchbar__input " + (isActive ? "searchbar__input-active" : "")}
+              placeholder="Поиск"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              onFocus={open}
+          />
+          <button className="searchbar__search-button" onClick={handleSearchSubmit}>
+            <SearchSvg></SearchSvg>
+          </button>
+        </div>
+        <div className={"searchbar__modal " + (isActive ? "searchbar__modal-active" : "")}>
+          ffdfddfdfdfdfdfdff
+        </div>
       </div>
-      <div className="searchbar__modal" style={{display: isActive ? 'flex' : 'none'}}>
-        ffdfddfdfdfdfdfdff
-      </div>
-
-    </div>
   );
 }
 
