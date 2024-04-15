@@ -1,0 +1,29 @@
+@use "../../../styles/variables" as *
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 12px 16px 12px 16px
+  border-radius: 5px
+  background: $primary-color
+  color: white
+  &-color
+    &-lime
+      background: $accent-color
+      color: $primary-color
+      &:hover
+        background: #BAF237
+    &-black
+      background: $primary-color
+      color: white
+    &-white
+      background: white
+      color: $primary-color
+      border: 1px solid #777777
+  &-size
+    &-large
+      height: 60px
+    &-medium
+      height: 44px
+    &-small
+      height: 34px
