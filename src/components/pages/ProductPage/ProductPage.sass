@@ -1,9 +1,102 @@
+@use "../../../styles/variables.sass" as *
 .product-page
   margin-top: 16px
-  &__info
+  display: flex
+  flex-direction: column
+  gap: 80px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    gap: 90px
+  &__images
     display: flex
     gap: 90px
     height: 632px
-    &__carousel
-      width: 130px
-      height: 632px
+  &__overview
+    height: 632px
+    display: flex
+    justify-content: space-between
+    gap: 90px
+  &__img
+    border-radius: 10px
+    width: 450px
+  &__side-blocks-wrapper
+    display: flex
+    flex-direction: column
+    gap: 34px
+    max-width: 400px
+  &__main-info
+    background: $light-secondary-color
+    border-radius: 10px
+    padding: 16px
+    display: flex
+    flex-direction: column
+    box-shadow: $card-box-shadow
+    gap: 24px
+    &__rating
+      display: flex
+      align-items: center
+      gap: 10px
+  &__price-block
+    &__wrapper
+      padding: 16px
+    border-radius: 10px
+    background: $light-secondary-color
+    box-shadow: $card-box-shadow
+    &__delivery
+      background: $secondary-color
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 50px
+    &__buttons
+      display: grid
+      grid-column-gap: 16px
+      grid-row-gap: 11px
+      Button:nth-child(2)
+        grid-column: span 1
+      Button:first-child
+        grid-column: span 19
+      Button:last-child
+        grid-column: span 20
+  &__details
+    &__characteristics
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      img
+        width: 200px
+        border-radius: 5px
+      &__list
+        flex-grow: 0.8
+        display: flex
+        flex-direction: column
+        gap: 8px
+      &__item
+        position: relative
+        margin: 0
+        &:before
+          content: ''
+          position: absolute
+          bottom: 0.2rem
+          width: 100%
+          border-bottom: 2px dotted $dots-color
+          z-index: -100
+        &__value
+          position: absolute
+          right: 0
+          background: white
+          z-index: 1
+          color: $primary-color
+        &__title
+          color: $secondary-text-color
+          z-index: 1
+          background: white
+    &__switcher
+      height: 44px
+      display: flex
+      margin-bottom: 24px
+      button
+        flex-grow: 1
+      .active
+        border-bottom: solid 3px black
