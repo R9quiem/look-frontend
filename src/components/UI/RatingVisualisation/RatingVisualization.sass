@@ -1,0 +1,23 @@
+@use "../../../styles/variables" as *
+.rating
+  display: inline-block
+  position: relative
+  &__bg
+    position: absolute
+    top: 0
+    width: 100%
+    background: $rating-color
+    height: 100%
+    mask-image: url("../../../assets/star-icon.svg")
+    z-index: 100
+  &__stars
+    display: flex
+    &__item
+      position: relative
+      &-button
+        z-index: 101
+        position: absolute
+        height: 100%
+        width: 100%
+
+
