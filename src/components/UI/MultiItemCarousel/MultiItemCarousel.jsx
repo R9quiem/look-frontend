@@ -10,35 +10,11 @@ const testdata = [
 
 
 export const MultiItemCarouselContext = createContext()
-function MultiItemCarousel({}) {
+function MultiItemCarousel({direction}) {
     const [currentFirstSlide,setCurrentFirstSlide] = useState(0);
     const [items,setItems] = useState(testdata)
-    const [touchPosition, setTouchPosition] = useState(null)
     const showingSlides = 4;
-    const handleTouchStart = (e) => {
-        const touchDown = e.clientY;
 
-        setTouchPosition(touchDown);
-    }
-
-    const handleTouchMove = (e) => {
-        if (touchPosition === null) {
-            return;
-        }
-
-        const currentPosition = e.clientY;
-        const direction = touchPosition - currentPosition;
-
-        if (direction > 10) {
-            changeSlide(1);
-        }
-
-        if (direction < -10) {
-            changeSlide(-1);
-        }
-
-        setTouchPosition(null);
-    }
     const changeSlide = (direction = 1) => {
 
         let firstSlideNumber;
@@ -58,17 +34,15 @@ function MultiItemCarousel({}) {
     return (
         <div
             className="multi-carousel"
-            onMouseDown={handleTouchStart}
-            onMouseUp={handleTouchMove}
         >
             <MultiItemCarouselContext.Provider
                 value={{
                     items,
                     changeSlide,
-                    currentFirstSlide: currentFirstSlide
+                    currentFirstSlide: currentFirstSlide,
                 }}>
-                <CarouselItemList items={items}/>
-                <Arrows isLeftEnd={currentFirstSlide===0} isRightEnd={currentFirstSlide>=items.length-showingSlides}/>
+                <CarouselItemList direction={direction} items={items}/>
+                <Arrows direction={direction} isLeftEnd={currentFirstSlide===0} isRightEnd={currentFirstSlide>=items.length-showingSlides}/>
             </MultiItemCarouselContext.Provider>
         </div>
     )
